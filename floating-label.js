@@ -7,7 +7,6 @@
 
 (function($) {
   $.fn.floatingLabel = function(options) {
-    console.log(this);
     this.each(function() {
       // Default variable
       var input = "#" + this.id;
