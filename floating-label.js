@@ -23,7 +23,7 @@
         transition: true,
         transitionProperties: "all",
         transitionDuration: ".2s",
-        placeHolderColor: false
+        placeholderColor: false
       };
 
       var settings = $.extend({}, defaults, options);
@@ -88,8 +88,8 @@
             });
           }
 
-          if (settings.placeHolderColor !== false) {
-            label.css("color", settings.placeHolderColor);
+          if (settings.placeholderColor !== false) {
+            label.css("color", settings.placeholderColor);
           }
         }
       }
