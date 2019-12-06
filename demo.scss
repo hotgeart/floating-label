@@ -25,7 +25,7 @@ p {
   min-height: 14rem;
   padding: 2rem;
   margin-bottom: 2rem;
-  border: 1px solid #ced4da;
+  border: 0.0625rem solid #ced4da;
   border-radius: .25rem;
 }
 #dark {
@@ -52,7 +52,7 @@ p {
     }
 
     .floating {
-      border: 1px solid #ddd;
+      border: 0.0625rem solid #ddd;
     }
   }
 }
@@ -61,21 +61,21 @@ p {
   min-height: 14rem;
   padding: 2rem;
   margin-bottom: 2rem;
-  border: 1px solid #ced4da;
+  border: 0.0625rem solid #ced4da;
 
   input {
     appearance: none;
     box-shadow: 0 0 0;
     padding: .6rem 0 .4rem 0;
     border: 0;
-    border-bottom: 1px solid #ced4da;
+    border-bottom: 0.0625rem solid #ced4da;
     border-radius: 0;
     display: block;
     width: 100%;
   
     &:focus {
       outline: 0;
-      border-bottom: 1px solid #27ae60;
+      border-bottom: 0.0625rem solid #27ae60;
     }
   }
 }
@@ -83,13 +83,13 @@ p {
 #custom {
   min-height: auto;
   background: #fafafa;
-  border: 1px solid #dee2e6;
+  border: 0.0625rem solid #dee2e6;
 
   input {
     appearance: none;
     box-shadow: 0 0 0;
     padding: .5rem 1.3rem;
-    border: 1px solid #dee2e6;
+    border: 0.0625rem solid #dee2e6;
     border-radius: 2rem;
     display: block;
     width: 100%;
@@ -104,7 +104,7 @@ p {
 
     &.is {
       color: red!important;
-      border: 1px solid #dee2e6;
+      border: 0.0625rem solid #dee2e6;
       border-radius: .5rem;
       padding: .2rem .5rem!important;
     }
