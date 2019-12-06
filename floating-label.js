@@ -7,6 +7,7 @@
 
 (function($) {
   $.fn.floatingLabel = function(options) {
+    console.log(this);
     this.each(function() {
       // Default variable
       var input = "#" + this.id;
@@ -41,7 +42,7 @@
           input.val().length > 0 ||
           forceFloat
         ) {
-          label.removeClass("not");
+          label.addClass("is");
           label.css({
             position: "absolute",
             top: 0,
@@ -65,7 +66,7 @@
           }
           // NOT floating
         } else {
-          label.addClass("not");
+          label.removeClass("is");
           label.css({
             position: "absolute",
             top: input.css("padding-top"),

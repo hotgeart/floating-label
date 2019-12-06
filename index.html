@@ -52,7 +52,7 @@
             </div>
             <div class="col-md-4">
               <div id="material">
-                  <h3 class="h5 mb-4">Material Example</h3>
+                <h3 class="h5 mb-4">Material Example</h3>
                 <div class="mb-4">
                   <label for="fullname-3">Full Name</label>
                   <input type="text" id="fullname-3" autocomplete="off" value="Thomas Mester">
@@ -132,15 +132,33 @@
   placeHolderColor: 'pink'
 });</code></pre>
 
-        <h2>Overriding CSS</h2>
+          <h2>Overriding CSS</h2>
 
-        <div class="row">
-          <div class="col">
-            <div id="override">
-              
+          <div class="row">
+            <div class="col-md-6">
+              <div id="custom">
+                <h3 class="h5 mb-4">Custom CSS</h3>
+                <div>
+                  <label for="email-4">E-mail</label>
+                  <input type="text" id="email-4" autocomplete="off">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p>The label has a class <code>floating</code> and when it float the class <code>is</code> is added.<br>⚠ You may need to add <code>!important</code> to your rules.</p>
+              <strong>SASS example:</strong>
+<pre><code class="scss">.floating {
+  color: green!important;
+
+  &.is {
+    color: red!important;
+    border: 1px solid #dee2e6;
+    border-radius: .5rem;
+    padding: .2rem .5rem!important;
+  }
+}</code></pre>
             </div>
           </div>
-        </div>
 
         </div>
       </div>
@@ -152,7 +170,9 @@
     <script>
     $( document ).ready(function() {
       hljs.initHighlightingOnLoad();
-      $("#basic input, #material input").floatingLabel();
+      $("#basic input, #material input, #custom input").floatingLabel({
+        transition: false
+      });
       $("#dark input").floatingLabel({
         placeholderColor: "#dedede"
       });

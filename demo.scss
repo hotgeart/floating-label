@@ -21,15 +21,15 @@ p {
 .h5 {
   font-weight: 400;
 }
-#basic {
-  height: 14rem;
+#custom, #basic {
+  min-height: 14rem;
   padding: 2rem;
   margin-bottom: 2rem;
   border: 1px solid #ced4da;
   border-radius: .25rem;
 }
 #dark {
-  height: 14rem;
+  min-height: 14rem;
   color: white;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -58,7 +58,7 @@ p {
 }
 
 #material {
-  height: 14rem;
+  min-height: 14rem;
   padding: 2rem;
   margin-bottom: 2rem;
   border: 1px solid #ced4da;
@@ -76,6 +76,37 @@ p {
     &:focus {
       outline: 0;
       border-bottom: 1px solid #27ae60;
+    }
+  }
+}
+
+#custom {
+  min-height: auto;
+  background: #fafafa;
+  border: 1px solid #dee2e6;
+
+  input {
+    appearance: none;
+    box-shadow: 0 0 0;
+    padding: .5rem 1.3rem;
+    border: 1px solid #dee2e6;
+    border-radius: 2rem;
+    display: block;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .floating {
+    color: green!important;
+
+    &.is {
+      color: red!important;
+      border: 1px solid #dee2e6;
+      border-radius: .5rem;
+      padding: .2rem .5rem!important;
     }
   }
 }
