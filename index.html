@@ -11,12 +11,139 @@
     <link rel="stylesheet" href="demo.css">
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Floating Label jQuery plugin</h1>
+          <p>This plugin create with the <strong><u>right</u></strong> HTML a smart floating label 🎈</p>
+          <h2>Examples:</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div id="basic">
+                <h3 class="h5 mb-4">Bootstrap Example</h3>
+                <div class="mb-4">
+                  <label for="fullname-1">Full Name</label>
+                  <input type="text" id="fullname-1" autocomplete="off" class="form-control">
+                </div>
+                <div>
+                  <label for="big-mama">Big input</label>
+                  <input type="text" id="big-mama" autocomplete="off" class="form-control form-control-lg">
+                </div>
+              </div>
+              <strong>Javascript:</strong>
+              <pre><code class="js">$("#basic input").floatingLabel();</code></pre>
+            </div>
+            <div class="col-md-4">
+              <div id="dark">
+                <h3 class="h5 mb-4">Dark Example</h3>
+                <div class="mb-4">
+                  <label for="fullname-2">Full Name</label>
+                  <input type="text" id="fullname-2" autocomplete="off">
+                </div>
+                <div>
+                  <label for="email-2">E-mail</label>
+                  <input type="text" id="email-2" autocomplete="off" value="thomas@domain.com">
+                </div>
+              </div>
+              <strong>Javascript:</strong>
+<pre><code class="js">$("#dark input").floatingLabel({
+  placeHolderColor: "#dedede"
+});</code></pre>
+            </div>
+            <div class="col-md-4">
+              <div id="material">
+                  <h3 class="h5 mb-4">Material Example</h3>
+                <div class="mb-4">
+                  <label for="fullname-3">Full Name</label>
+                  <input type="text" id="fullname-3" autocomplete="off" value="Thomas Mester">
+                </div>
+                <div>
+                  <label for="email-3">E-mail</label>
+                  <input type="text" id="email-3" autocomplete="off">
+                </div>
+              </div>
+              <strong>Javascript:</strong>
+              <pre><code class="js mb-0">$("#full-name").floatingLabel();</code></pre>
+            </div>
+          </div>
+          <h2>HTML Code:</h2>
+<pre><code class="html">&lt;div&gt;
+    &lt;label for=&quot;fullname&quot;&gt;Full Name&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;fullname&quot;&gt;
+&lt;/div&gt;</code></pre>
 
+          <h2>Settings</h2>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Possibilities</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>transition</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>
+                  <p>
+                    If you want the label to be animated
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>transitionProperties</td>
+                <td>string</td>
+                <td>all</td>
+                <td>
+                  <p>
+                    The css properties you want to be animated.<br>Example: <code>"background, color, border"</code>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>transitionDuration</td>
+                <td>string</td>
+                <td>.2s</td>
+                <td>
+                  <p>
+                    How long should be the transition.<br>Example: <code>"1s"</code>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>placeHolderColor</td>
+                <td>string</td>
+                <td>The text color of the input</td>
+                <td>
+                  <p>
+                    The text color when the label plays like a placeholder.<br>Example: <code>"#ff0000"</code>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
+<pre><code class="js">$("#full-name").floatingLabel({
+  transitionProperties: 'background',
+  transitionDuration: '.3s',
+  placeHolderColor: 'pink'
+});</code></pre>
 
-    <div>
-      <label for="name">Name</label>
-      <input type="text" id="name" class="form-text">
+        <h2>Overriding CSS</h2>
+
+        <div class="row">
+          <div class="col">
+            <div id="override">
+              
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
     </div>
 
     <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
@@ -25,7 +152,10 @@
     <script>
     $( document ).ready(function() {
       hljs.initHighlightingOnLoad();
-      $("#name").floatingLabel();
+      $("#basic input, #material input").floatingLabel();
+      $("#dark input").floatingLabel({
+        placeholderColor: "#dedede"
+      });
     });
     </script>
   </body>
